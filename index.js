@@ -1,5 +1,6 @@
 let nameVisita;
 let ageVisita;
+let numRrhh = 0;
 
 alert("Bienvenido al sistema de ingreso de nuestra institución");
 alert(
@@ -14,16 +15,26 @@ if (menu == 1) {
   alert(
     "Muchas gracias, " +
       nameVisita +
-      "! Puede dejar la nota en Mesa de Entradas, Planta baja. Hasta luego!"
+      "! Puede dejar la nota en Mesa de Entradas, planta baja. Hasta luego!"
   );
-}
-elseif(menu == 2);
-{
+} else if (menu == 2) {
   nameVisita = prompt("Ingrese su nombre y apellido");
   ageVisita = prompt("Ingrese su edad");
-  oficinaVisita = prompt("En que oficina necesita hacer su trámite?");
-}
-elseif(menu == 3);
+  alert(
+    "Elija una oficina: \n 1) RRHH \n 2) Compras \n 3) Tesoreria \n 4) Secretaría "
+  );
+  let numOficina = prompt(
+    "Ingrese el número correspondiente a la opción deseada"
+  );
+  if (numOficina == 1) {
+    alert(
+      "La oficina de Recursos Humanos se encuentra en el 1er Piso, será llamado con numero " +
+        numRrhh
+    );
+    numRrhh = numRrhh++;
+    console.log(numRrhh);
+  }
+} else menu == 3;
 {
   alert("Muchas gracias");
 }
